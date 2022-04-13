@@ -12,6 +12,7 @@ import PieChart from '../components/PieChart';
 import Heading from '../components/Heading';
 import Description from '../components/Description';
 import Name from '../components/Name';
+import Credits from '../components/Credits';
 
 export default function Pokemon() {
 
@@ -82,6 +83,7 @@ export default function Pokemon() {
           </div>
         </div>
       }
+      <Credits></Credits>
     </div>
   )
 }

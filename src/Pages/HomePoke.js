@@ -1,6 +1,7 @@
 import React from 'react'
 import useFetch from '../hooks/useFetch'
 import { Link } from 'react-router-dom'
+import Credits from '../components/Credits'
 
 export default function HomePoke({name}) {
     const {data , loading , err } = useFetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
@@ -33,6 +34,7 @@ export default function HomePoke({name}) {
           </Link>
         </div>
       }
+      <Credits></Credits>
     </>
   )
 }

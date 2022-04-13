@@ -7,6 +7,7 @@ import Poke from './HomePoke';
 
 import Heading from '../components/Heading';
 import Search from '../components/Search';
+import Credits from '../components/Credits';
 
 export default function Home() {
     const [url , setUrl ] = useState('https://pokeapi.co/api/v2/pokemon')
@@ -45,6 +46,9 @@ export default function Home() {
                 </svg>
                 </button> 
             </div>
+
+            <Credits></Credits>
         </div>
+
     )
 }

@@ -131,7 +131,13 @@ a {
     text-align: center;
 }
 
-
+.credits {
+    padding: 1rem 0rem 3rem 0rem;
+    text-align: center;
+}
+.credits a {
+    text-decoration: underline;
+}
 
 @media screen and (max-width:900px) {
     :root {
