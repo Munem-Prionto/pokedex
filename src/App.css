@@ -1,38 +1,386 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins',
+    sans-serif;
+}
+:root {
+    font-size: 16px;
+
+    --width: 70%;
+    --border-radius : 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    text-decoration: none;
+    color: black;
+}
+.chart {
+    width: 700px;
+    height: 700px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Components */
+/* HEADING  */
+.Heading {
+    padding: 2rem 0rem 0rem 0rem;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Search */
+.Search
+{   
+    width:70%;
+    margin: 0 auto;
+}
+.Search form {
+    margin:2rem 0rem;
+    display: flex;
+    align-items: center;
+}
+.Search form span {
+    display: flex;
+    align-items: center;
+    background: #333;
+    display: block;
+    height: 40px;
+    color: white;
+    padding: .6rem;
+    font-size: .8rem;
+}
+.Search form input {
+        font-size: 1rem;
+    outline: none;
+    height: 40px;
+    padding: .25rem;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+/* Pages */
+/* Home */
+.HomePage {
+    width: var(--width);
+    margin: 0 auto;
+}
+.HomePage .container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3 , 1fr);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.HomePage .pagination{
+    margin: 2rem 0rem 4rem 0rem;
+    text-align: center;
 }
+.HomePage .pagination button {
+    background: #ddd;
+    cursor: pointer;
+    margin: 0rem .5rem;
+    padding: .25rem 1rem;
+    outline: none;
+    border: none;
+}
+.HomePage .pagination button:hover {
+    opacity: 50%;
+}
+/* HomePoke */
+.HomePokePage {
+    padding: .5rem;
+    transition: all .2s;
+    border-radius: var(--border-radius);
+}
+.HomePokePage:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.HomePokePage .flex-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.HomePokePage .flex-container .imgDiv img{
+    width: 100%;
+}
+.HomePokePage .flex-container .infoDiv div {
+    text-align: right;
+   
+   
+}
+.HomePokePage .flex-container .infoDiv div:first-child{
+    font-size: 1rem;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+.HomePokePage .flex-container .infoDiv div:last-child {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+}
+.HomePokePage .types {
+    text-align: center;
+}
+
+
+
+@media screen and (max-width:900px) {
+    :root {
+        --width:95%;
+    }
+    .HomePage .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:450px) {
+    :root {
+        --width: 90%;
+    }
+    .HomePage .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .Search {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.normal {
+    background: #A8A77A !important;
+}
+.grass {
+    background: #7AC74C !important;
+}
+.fire {
+    background-color: #EE8130 !important;
+}
+.electric {
+    background-color: #F7D02C !important;
+}
+.water {
+    background-color: #6390F0 !important;
+}
+.ice {
+    background-color: #96D9D6 !important;
+}
+.fighting {
+    background-color: #C22E28 !important;
+}
+.poison {
+    background-color: #A33EA1 !important;
+}
+.ground {
+    background-color: #E2BF65!important;
+}
+.flying {
+    background-color: #A98FF3!important;
+}
+.psychic {
+    background-color: #F95587 !important;
+}
+
+.bug {
+    background-color: #A6B91A !important;
+}
+.rock {
+    background-color: #B6A136 !important;
+}
+.ghost {
+    background-color: #735797 !important;
+}
+.dragon {
+    background-color: #6F35FC !important;
+}
+.dark {
+    background-color: #705746 !important;
+}
+.steel {
+    background-color: #B7B7CE !important;
+}
+.fairy {
+    background-color: #D685AD !important;
+}
+/* border */
+.border-normal {
+    border: 3px solid #A8A77A !important;
+}
+
+.border-grass {
+    border: 3px solid #7AC74C !important;
+}
+
+.border-fire {
+    border: 3px solid #EE8130 !important;
+}
+
+.border-electric {
+    border: 3px solid #F7D02C !important;
+}
+
+.border-water {
+    border: 3px solid #6390F0 !important;
+}
+
+.border-ice {
+    border: 3px solid #96D9D6 !important;
+}
+
+.border-fighting {
+    border: 3px solid #C22E28 !important;
+}
+
+.border-poison {
+    border: 3px solid #A33EA1 !important;
+}
+
+.border-ground {
+    border: 3px solid #E2BF65 !important;
+}
+
+.border-flying {
+    border: 3px solid #A98FF3 !important;
+}
+
+.border-psychic {
+    border: 3px solid #F95587 !important;
+}
+
+.border-bug {
+    border: 3px solid #A6B91A !important;
+}
+
+.border-rock {
+    border: 3px solid #B6A136 !important;
+}
+
+.border-ghost {
+    border: 3px solid #735797 !important;
+}
+
+.border-dragon {
+    border: 3px solid #6F35FC !important;
+}
+
+.border-dark {
+    border: 3px solid #705746 !important;
+}
+
+.border-steel {
+    border: 3px solid #B7B7CE !important;
+}
+
+.border-fairy {
+    border: 3px solid #D685AD !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* small  */
+.small-normal {
+    background: #A8A77A !important;
+}
+
+.small-grass {
+    background: #7AC74C !important;
+}
+
+.small-fire {
+    background-color: #EE8130 !important;
+}
+
+.small-electric {
+    background-color: #F7D02C !important;
+}
+
+.small-water {
+    background-color: #6390F0 !important;
+}
+
+.small-ice {
+    background-color: #96D9D6 !important;
+}
+
+.small-fighting {
+    background-color: #C22E28 !important;
+}
+
+.small-poison {
+    background-color: #A33EA1 !important;
+}
+
+.small-ground {
+    background-color: #E2BF65 !important;
+}
+
+.small-flying {
+    background-color: #A98FF3 !important;
+}
+
+.small-psychic {
+    background-color: #F95587 !important;
+}
+
+.small-bug {
+    background-color: #A6B91A !important;
+}
+
+.small-rock {
+    background-color: #B6A136 !important;
+}
+
+.small-ghost {
+    background-color: #735797 !important;
+}
+
+.small-dragon {
+    background-color: #6F35FC !important;
+}
+
+.small-dark {
+    background-color: #705746 !important;
+}
+
+.small-steel {
+    background-color: #B7B7CE !important;
+}
+
+.small-fairy {
+    background-color: #D685AD !important;
+}
+ 
+/* 
+
+ */

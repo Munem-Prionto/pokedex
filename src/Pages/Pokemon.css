@@ -1,0 +1,66 @@
+
+.PokemonPage {
+    width: var(--width);
+    margin: 0 auto;
+    line-height: 2rem;
+    border-radius: var(--border-radius);
+    
+}
+.PokemonPage .container {
+    padding: 1rem;
+    margin: 2rem 0rem;
+    border-radius: var(--border-radius);
+    display: grid;
+    gap: 0rem 2rem;
+    grid-template-columns: 1fr 2fr;
+}
+.PokemonPage .header {
+/*     text-align: center; */
+}
+.PokemonPage .header img {
+    padding: 1rem;
+    width: 300px;
+
+}
+.PokemonPage .info {
+    text-align: center;
+}
+.PokemonPage .name {
+    font-size: 1rem;
+/*     text-align: center; */
+}
+.PokemonPage .types {
+
+    padding: 1rem 0rem;
+ /*    text-align: center; */
+}
+.PokemonPage .types span {
+    
+    border-radius: var(--border-radius);
+    margin-right: .5rem ;
+    padding: .25rem 1rem;
+}
+.rounded-span {
+
+    background: #eee;
+    border-radius: var(--border-radius);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: .05rem .25rem;
+}
+
+.PokemonPage .abilities {
+    margin-bottom: 1rem;
+}
+.PokemonPage .basic-stats {
+    margin-bottom: 1rem;
+}
+.PokemonPage .stats {
+    padding: 1rem 0rem;
+}
+
+@media screen and (max-width:900px) {
+    .PokemonPage .container {
+        grid-template-columns: 1fr;
+    }
+}
