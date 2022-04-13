@@ -53,6 +53,11 @@ a {
     color: white;
     padding: .6rem;
     font-size: .8rem;
+    cursor: pointer;
+    transition: all .2s;
+}
+.Search form span:hover {
+    opacity: 50%;
 }
 .Search form input {
         font-size: 1rem;
